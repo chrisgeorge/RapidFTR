@@ -56,6 +56,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :contact_information
 
+  map.resources :password_reset
+
   map.root :controller => 'home', :action => :index
 
 end

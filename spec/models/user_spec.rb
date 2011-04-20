@@ -150,5 +150,14 @@ describe User do
     blacklisted_device.blacklisted.should == true
     
   end
+  
+  it "should set request_password_reset" do
+    user = build_and_save_user(:user_name => "timothy", :request_password_reset => true)
+    user.request_password_reset.should be_true
+    user = User.find_by_user_name("timothy")
+    user.request_password_reset = false
+    user.save!
+    user.request_password_reset.should be_false
+  end
 
 end

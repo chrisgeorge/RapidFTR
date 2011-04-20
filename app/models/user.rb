@@ -15,6 +15,7 @@ class User < CouchRestRails::Document
   property :location
   property :disabled, :cast_as => :boolean
   property :mobile_login_history, :cast_as => ['MobileLoginEvent']
+  property :request_password_reset, :cast_as => :boolean
   attr_accessor :password_confirmation, :password
 
 

@@ -1,0 +1,10 @@
+<% form_tag url_for({:action=>"create", :controller=>"password_reset"}), :class => 'default-form' do %>
+  <fieldset>
+    <h3>Reset Password</h3>
+    <p>
+      <%= label_tag "user_name", "User name" %>
+      <%= text_field_tag "user_name" %>
+    </p>
+  </fieldset>
+  <%= submit_button 'Request Password Reset' %>
+<% end %>
